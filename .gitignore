@@ -132,3 +132,7 @@ _UpgradeReport_Files/
 __pycache__
 .DS_Store
 *~
+
+# === Custom Rules ===
+*.css
+*.css.map

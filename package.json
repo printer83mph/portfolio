@@ -9,6 +9,7 @@
         "sass": "^1.23.0"
     },
     "scripts": {
-        "deploy": "node bin/deploy.js"
+        "compile": "node bin/compile.js",
+        "publish": "node bin/compile.js && node bin/publish.js"
     }
 }
