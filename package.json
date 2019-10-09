@@ -6,10 +6,13 @@
     "dependencies": {},
     "devDependencies": {
         "gh-pages": "^2.1.1",
+        "nodemon": "^1.19.3",
         "sass": "^1.23.0"
     },
     "scripts": {
         "compile": "node bin/compile.js",
+        "compileDev": "node bin/compileDev.js",
+        "watch": "nodemon -e sass -x \"npm run compileDev\" ",
         "publish": "node bin/compile.js && node bin/publish.js"
     }
 }
