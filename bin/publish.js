@@ -1,7 +1,7 @@
 const ghPages = require('gh-pages');
 
-ghPages.publish('src', {
+ghPages.publish('public', {
     push: true,
-    src: "**/*.!(scss|map)",
+    src: "**/*.!(map)",
     message: "Build and deploy to pages"
 }, function(err) {});
