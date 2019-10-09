@@ -12,7 +12,7 @@
     "scripts": {
         "compile": "node bin/compile.js",
         "compileDev": "node bin/compileDev.js",
-        "watch": "nodemon -e sass -x \"npm run compileDev\" ",
+        "watch": "nodemon -e scss -x \"npm run compileDev\" ",
         "publish": "node bin/compile.js && node bin/publish.js"
     }
 }
