@@ -1,0 +1,22 @@
+@import "base/_reset.scss";
+
+@mixin break($point) {
+    @media screen and (min-width: $point) {
+        @content;
+    }
+}
+
+$tablet: 720px;
+$desktop: 1024px;
+
+
+.exampleselector {
+
+    // mobile properties
+
+    @include break($tablet) {
+        
+        // tablet properties
+
+    }
+}

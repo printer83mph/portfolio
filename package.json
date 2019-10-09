@@ -1,0 +1,14 @@
+{
+    "name": "portfolio",
+    "description": "Thomas Shaw, in a nutshell",
+    "authors": "Thomas Shaw <printer.83mph@mgmail.com",
+    "version": "1.0.0",
+    "dependencies": {},
+    "devDependencies": {
+        "gh-pages": "^2.1.1",
+        "sass": "^1.23.0"
+    },
+    "scripts": {
+        "deploy": "node bin/deploy.js"
+    }
+}
