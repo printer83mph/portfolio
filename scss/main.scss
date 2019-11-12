@@ -1,13 +1,7 @@
-@import "base/_reset.scss";
+@import "base/_reset";
 
-@mixin break($point) {
-    @media screen and (min-width: $point) {
-        @content;
-    }
-}
-
-$tablet: 720px;
-$desktop: 1024px;
+@import "./break";
+@import "./base/fonts";
 
 html {
     font-size: 62.5%;
@@ -16,4 +10,3 @@ html {
 body {
     font-size: 2rem;
 }
-
