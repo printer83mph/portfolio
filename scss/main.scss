@@ -8,6 +8,7 @@ html {
 }
 
 section {
+    width: 100%;
     background-color: white;
     min-height: 100vh;
     z-index: 2;
@@ -17,17 +18,26 @@ section {
 .splash {
     background-color: lightcyan;
     z-index: 0;
+    position: fixed;
 }
 
-#title {
-    width: 100%;
-    top: calc(50vh - .5em);
-    position: fixed;
+.booster {
+    height: 100vh;
+}
+
+h1 {
     text-align: center;
     font-family: "Poppins", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 10rem;
-    color: rgba(0,0,0,.87);
+
+    &#title {
+        position: relative;
+        width: 100%;
+        top: calc(40vh - .5em);
+        color: rgba(0,0,0,.87);
+    }
+
 }
 
 body {

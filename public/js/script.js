@@ -1,10 +1,10 @@
 
-var title, startPos;
+var splash, startPos;
 
 window.onload = function() {
-    title = document.getElementById("title");
+    splash = document.getElementById("splash");
 }
 
 window.addEventListener('scroll', function(e) {
-    title.style.transform = "translate(0, " + ( - window.scrollY/2) + "px)";
+    splash.style.transform = "translate(0, " + ( - window.scrollY * .4 ) + "px)";
 });
