@@ -6,5 +6,5 @@ window.onload = function() {
 }
 
 window.addEventListener('scroll', function(e) {
-    splash.style.transform = "translate(0, " + ( - window.scrollY * .4 ) + "px)";
+    splash.style.transform = "translate(0, " + ( - window.scrollY * .45 ) + "px)";
 });

@@ -1,10 +1,18 @@
 @import "base/_reset";
 
+@import "./anim.scss";
 @import "./break";
 @import "./base/fonts";
 
 html {
     font-size: 62.5%;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 10rem;
 }
 
 section {
@@ -15,29 +23,39 @@ section {
     position: relative;
 }
 
-.splash {
-    background-color: lightcyan;
-    z-index: 0;
-    position: fixed;
-}
-
 .booster {
     height: 100vh;
 }
 
-h1 {
-    text-align: center;
-    font-family: "Poppins", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 10rem;
+.splash {
+    background-color: black;
+    z-index: 0;
+    position: fixed;
 
-    &#title {
+    h1 {
+        color: rgba(255,255,255,.9);
         position: relative;
-        width: 100%;
-        top: calc(40vh - .5em);
-        color: rgba(0,0,0,.87);
+        top: calc(45vh - .5em);
+    }
+}
+
+.nut {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    // bottom width/top width = .813828
+
+    &.top {
+        height: 40%;
     }
 
+    &.bottom {
+        width: 40%;
+    }
 }
 
 body {
