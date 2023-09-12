@@ -1,5 +1,5 @@
 {
   "singleQuote": true,
   "endOfLine": "auto",
-  "plugins": ["prettier-plugin-tailwind"]
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

@@ -1,5 +1,14 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import TransitionWrapper from './transition-wrapper';
+
+import { Schibsted_Grotesk } from 'next/font/google';
+
+const fontSans = Schibsted_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-sans',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${fontSans.variable}`}>
+        <TransitionWrapper>{children}</TransitionWrapper>
+      </body>
     </html>
   );
 }
