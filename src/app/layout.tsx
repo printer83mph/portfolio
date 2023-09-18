@@ -3,6 +3,7 @@ import './globals.css';
 
 import { Schibsted_Grotesk } from 'next/font/google';
 import Nav from './nav';
+import Socials from './socials';
 
 const fontSans = Schibsted_Grotesk({
   subsets: ['latin'],
@@ -22,9 +23,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${fontSans.variable}`}>
-      <body className="container mx-auto my-24 flex h-screen max-h-[900px] min-h-fit flex-col gap-16 px-2 xl:flex-row">
+      <body className="container mx-auto my-20 min-w-[342px] overflow-y-scroll bg-black px-2 text-lg font-light text-white">
         <Nav />
-        <div className="flex-grow">{children}</div>
+        <div className="mt-12 xl:ml-[26rem] xl:mt-0 2xl:ml-[28rem]">
+          {children}
+        </div>
+        <div className="mx-8 mt-12 block xl:hidden">
+          <Socials />
+        </div>
       </body>
     </html>
   );
