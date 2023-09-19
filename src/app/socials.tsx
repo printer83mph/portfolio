@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
-const className = 'group flex flex-row items-center gap-4';
+const className = 'group flex flex-row items-center gap-4 pl-1';
 function Social({
   icon,
   children,
@@ -42,6 +42,12 @@ function Social({
 export default function Socials() {
   return (
     <ul className="space-y-3">
+      <Social
+        icon="mdi:document"
+        href="https://drive.google.com/uc?export=download&id=1374ZE8m_Ps-GNkAej4Qxx2YU6ntBQ1FA"
+      >
+        Resume 2023
+      </Social>
       <Social icon="mdi:envelope" href="mailto:thomas@tlshaw.me">
         thomas@tlshaw.me
       </Social>

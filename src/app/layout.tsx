@@ -28,9 +28,6 @@ export default function RootLayout({
         <div className="mt-12 xl:ml-[26rem] xl:mt-0 2xl:ml-[28rem]">
           {children}
         </div>
-        <div className="mx-8 mt-12 block xl:hidden">
-          <Socials />
-        </div>
       </body>
     </html>
   );

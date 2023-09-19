@@ -38,7 +38,7 @@ export default function Nav() {
   return (
     <nav className="flex select-none flex-col items-center xl:fixed xl:items-start xl:pl-4">
       <h1 className="text-4xl font-bold tracking-tight">Thomas Shaw</h1>
-      <ul className="mt-4 flex flex-row lg:-ml-4">
+      <ul className="mt-4 flex flex-row xl:-ml-4">
         <NavItem href="/about">About</NavItem>
         <NavItem href="/" exact>
           Projects
