@@ -1,5 +1,7 @@
-import Link from 'next/link';
-
 export default function AboutPage() {
-  return <main>{/* TODO */}</main>;
+  return (
+    <main className="prose prose-lg prose-invert">
+      <h1>TODO</h1>
+    </main>
+  );
 }

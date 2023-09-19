@@ -10,11 +10,13 @@ export default function ProjectView({
   projectSlug,
   color,
   previewImage,
+  appearDelay,
 }: {
   name: string;
   projectSlug: string;
   color: string;
   previewImage: string;
+  appearDelay: string;
 }) {
   const viewRef = useRef<HTMLDivElement>(undefined!);
   // const { inMiddle } = useScreenMiddle(viewRef);
@@ -26,7 +28,11 @@ export default function ProjectView({
   const inMiddle = !!entry?.isIntersecting;
 
   return (
-    <div ref={viewRef} className="select-none pb-4">
+    <div
+      ref={viewRef}
+      className="select-none pb-4 [animation:appear_.4s_ease-out_var(--appear-delay)_1_normal_backwards]"
+      style={{ '--appear-delay': appearDelay } as CSSProperties}
+    >
       <Link
         href={`/${projectSlug}`}
         style={{ '--project-color': color } as CSSProperties}

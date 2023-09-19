@@ -24,6 +24,9 @@ function NavItem({
         className={`block px-4 py-2 transition-colors ${
           isActive ? '' : 'text-neutral-400'
         }`}
+        onClick={() => {
+          scrollTo({ top: 0 });
+        }}
       >
         {children}
       </Link>
@@ -34,8 +37,8 @@ function NavItem({
 export default function Nav() {
   return (
     <nav className="flex select-none flex-col items-center xl:fixed xl:items-start xl:pl-4">
-      <h1 className="text-5xl font-bold tracking-tight">Thomas Shaw</h1>
-      <ul className="-ml-4 mt-4 flex flex-row">
+      <h1 className="text-4xl font-bold tracking-tight">Thomas Shaw</h1>
+      <ul className="mt-4 flex flex-row lg:-ml-4">
         <NavItem href="/about">About</NavItem>
         <NavItem href="/" exact>
           Projects
