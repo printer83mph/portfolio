@@ -11,16 +11,16 @@ export default function ProjectView({
   color,
   previewImage,
   appearDelay,
+  underConstruction,
 }: {
   name: string;
   projectSlug: string;
   color: string;
   previewImage: string;
   appearDelay: string;
+  underConstruction?: boolean;
 }) {
   const viewRef = useRef<HTMLDivElement>(undefined!);
-  // const { inMiddle } = useScreenMiddle(viewRef);
-
   const entry = useIntersectionObserver(viewRef, {
     rootMargin: '-50% 0px -50% 0px',
     threshold: 0,

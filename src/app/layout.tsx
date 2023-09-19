@@ -1,9 +1,8 @@
-import type { Metadata } from 'next';
 import './globals.css';
 
+import type { Metadata } from 'next';
 import { Schibsted_Grotesk } from 'next/font/google';
 import Nav from './nav';
-import Socials from './socials';
 
 const fontSans = Schibsted_Grotesk({
   subsets: ['latin'],

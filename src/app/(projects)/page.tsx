@@ -6,6 +6,7 @@ const projects = [
     projectSlug: 'sdf-playground',
     color: 'rgb(255, 0, 0)',
     previewImage: 'troll',
+    underConstruction: true,
   },
   {
     name: 'Tiny Minecraft',

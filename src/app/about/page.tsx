@@ -1,9 +1,7 @@
 'use client';
 
 import ThomasImage from '@/resources/thomas.png';
-import { Icon } from '@iconify/react';
 import Image from 'next/image';
-import Link from 'next/link';
 import Socials from '../socials';
 
 export default function AboutPage() {
