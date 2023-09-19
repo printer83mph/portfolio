@@ -1,5 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { CSSProperties } from 'react';
+import { HiArrowRight } from 'react-icons/hi2';
 const portfolioBasePath = '/portfolio';
 
 const portfolioImages: {
@@ -20,17 +22,17 @@ const portfolioImages: {
   {
     name: 'Mixer',
     path: 'mixer_square.png',
-    size: 'tall',
-  },
-  {
-    name: 'Mixer',
-    path: 'mixer_square.png',
-    size: 'tall',
-  },
-  {
-    name: 'Mixer',
-    path: 'mixer_square.png',
     size: 'sq-small',
+  },
+  {
+    name: 'Mixer',
+    path: 'mixer_square.png',
+    size: 'tall',
+  },
+  {
+    name: 'Tennis Balls',
+    path: 'tennis_balls.jpeg',
+    size: 'wide',
   },
   {
     name: 'Mixer',
@@ -41,6 +43,11 @@ const portfolioImages: {
     name: 'Mixer',
     path: 'mixer_square.png',
     size: 'sq-small',
+  },
+  {
+    name: "World's Best Meeting Room",
+    path: 'meeting_room.jpeg',
+    size: 'wide',
   },
 ];
 
@@ -68,6 +75,13 @@ export default function PortfolioPage() {
           />
         </div>
       ))}
+      <Link
+        href="https://artstation.com/printer83mph/"
+        target="_blank"
+        className="flex aspect-square h-full w-full items-center justify-center gap-3 rounded-xl bg-neutral-800 hover:text-white sm:text-neutral-400"
+      >
+        See more on ArtStation <HiArrowRight />
+      </Link>
     </main>
   );
 }
