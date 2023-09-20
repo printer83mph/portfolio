@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { HiArrowRight } from 'react-icons/hi2';
 import Figure from '@/components/figure';
 
+export const metadata = {
+  title: 'Government Cheese | Thomas Shaw',
+};
+
 # Government Cheese
 
 <Figure
@@ -15,7 +19,11 @@ The official Government Cheese website is built using **TypeScript**, **React**,
   href="https://govcheesedre.com/"
   target="_blank"
   className="mr-auto flex w-max items-center gap-3 rounded-lg bg-orange-500 px-10 py-2 font-semibold !no-underline transition-colors hover:bg-orange-600"
-  children={['Live Site', <HiArrowRight />]}
+  children={
+    <>
+      Live Site <HiArrowRight />
+    </>
+  }
 />
 
 ## Hybrid user-admin design
