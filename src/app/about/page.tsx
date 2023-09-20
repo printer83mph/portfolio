@@ -1,8 +1,10 @@
-'use client';
-
 import ThomasImage from '@/resources/thomas.png';
 import Image from 'next/image';
 import Socials from '../socials';
+
+export const metadata = {
+  title: 'About | Thomas Shaw',
+};
 
 export default function AboutPage() {
   return (

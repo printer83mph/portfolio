@@ -1,6 +1,10 @@
 import ProjectView, { ProjectViewProps } from './project-view';
 import { TbCrane } from 'react-icons/tb';
 
+export const metadata = {
+  title: 'Projects | Thomas Shaw',
+};
+
 const projects: Omit<ProjectViewProps, 'appearDelay'>[] = [
   {
     name: 'Minier Minecraft',

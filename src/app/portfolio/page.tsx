@@ -4,6 +4,10 @@ import { CSSProperties } from 'react';
 import { HiArrowRight } from 'react-icons/hi2';
 const portfolioBasePath = '/portfolio';
 
+export const metadata = {
+  title: 'Portfolio | Thomas Shaw',
+};
+
 const portfolioImages: {
   name: string;
   path: string;
