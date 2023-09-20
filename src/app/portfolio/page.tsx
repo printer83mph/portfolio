@@ -15,34 +15,19 @@ const portfolioImages: {
     size: 'sq-big',
   },
   {
-    name: 'Mixer',
-    path: 'mixer_square.png',
-    size: 'sq-small',
-  },
-  {
-    name: 'Mixer',
-    path: 'mixer_square.png',
-    size: 'sq-small',
-  },
-  {
-    name: 'Mixer',
-    path: 'mixer_square.png',
+    name: 'Chair',
+    path: 'chair.jpeg',
     size: 'tall',
+  },
+  {
+    name: 'A Cappella Fest Logo',
+    path: 'a_cappella.jpeg',
+    size: 'sq-small',
   },
   {
     name: 'Tennis Balls',
     path: 'tennis_balls.jpeg',
     size: 'wide',
-  },
-  {
-    name: 'Mixer',
-    path: 'mixer_square.png',
-    size: 'sq-big',
-  },
-  {
-    name: 'Mixer',
-    path: 'mixer_square.png',
-    size: 'sq-small',
   },
   {
     name: "World's Best Meeting Room",

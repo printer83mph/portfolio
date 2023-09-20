@@ -1,4 +1,5 @@
 import ProjectView, { ProjectViewProps } from './project-view';
+import { TbCrane } from 'react-icons/tb';
 
 const projects: Omit<ProjectViewProps, 'appearDelay'>[] = [
   {
@@ -23,21 +24,6 @@ const projects: Omit<ProjectViewProps, 'appearDelay'>[] = [
     color: 'rgb(179, 109, 71)',
     previewImage: '/projects/govcheese/splash.png',
   },
-  // TODO: more projects
-  // {
-  //   name: 'Mini Minecraft',
-  //   projectSlug: 'mini-minecraft',
-  //   techStack: ['cplusplus', 'opengl'],
-  //   color: 'rgb(65, 131, 75)',
-  //   previewImage: 'https://placekitten.com/1280/960',
-  // },
-  // {
-  //   name: 'AntsWorld',
-  //   projectSlug: 'antsworld',
-  //   techStack: ['react', 'vite', 'socketio'],
-  //   color: 'rgb(80, 80, 80)',
-  //   previewImage: 'https://placekitten.com/1280/960',
-  // },
 ];
 
 export default function ProjectsPage() {
@@ -50,6 +36,10 @@ export default function ProjectsPage() {
           appearDelay={`${index * 150}ms`}
         />
       ))}
+      <div className="mt-12 flex items-center gap-4">
+        <TbCrane className="text-2xl" /> More project pages - new and old - are
+        under construction!
+      </div>
     </main>
   );
 }
