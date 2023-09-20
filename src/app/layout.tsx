@@ -12,7 +12,7 @@ const fontSans = Schibsted_Grotesk({
 
 export const metadata: Metadata = {
   description:
-    'UPenn student looking to build neat stuff with neat people. Check out my stuff here!',
+    'UPenn student looking to build neat stuff with neat people. Check out all my work here!',
 };
 
 export default function RootLayout({
