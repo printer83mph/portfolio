@@ -9,8 +9,8 @@ const projects = [
     underConstruction: true,
   },
   {
-    name: 'Tiny Minecraft',
-    projectSlug: 'tiny-minecraft',
+    name: 'Minier Minecraft',
+    projectSlug: 'minier-minecraft',
     color: 'rgb(0, 150, 150)',
     previewImage: 'troll',
   },

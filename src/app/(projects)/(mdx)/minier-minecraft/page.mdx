@@ -1,0 +1,83 @@
+import Figure from '@/components/figure';
+
+# Minier Minecraft
+
+This project is a spiritual successor to **Mini Minecraft**, a class project where, collaborating with a group of two other students, we built a miniature version of Minecraft using C++ and OpenGL. **Minier Minecraft** instead uses a TypeScript and WebGL stack!
+
+Click below to play right in your browser!
+
+<Figure
+  src="/projects/minier-minecraft/minecraft_02.png"
+  alt="Minier Minecraft"
+  href="https://minecraft.tlshaw.me/"
+  external
+/>
+
+## Initial idea
+
+After some time experimenting with <a href="https://threejs.org/" target="_blank">THREE.js</a>, a WebGL-based graphics library, I decided it would be a good exercise to recreate Mini Minecraft using just TypeScript and THREE.
+
+<Figure
+  src="/projects/minier-minecraft/chunk.png"
+  caption="Debug view for chunk borders"
+  float="right"
+  aspectRatio="4/3"
+/>
+
+At first everything went fairly smoothly - individual world generation functions had very similar logic to their C++ equivalents. The structure of the world would stay mostly the same, being made up of 16x16 block chunk objects which each store their own terrain and mesh data, and all connected by one main terrain object which manages their generation.
+
+## Chunkloading
+
+However, the logic for chunkloading would have to be changed significantly due to the unfortunate lack of (good) multithreading in JavaScript. The only way to multithread in a browser would be `WebWorker`s and `SharedBufferArray`s, which I really didn't want to have to deal with.
+
+If I didn't implement some form of asynchronous chunk loading, the world would would freeze up every time a new chunk needed to be generated.
+
+<Figure
+  src="/projects/minier-minecraft/chunkloading.gif"
+  caption="Chunkloading in action"
+  float="left"
+  aspectRatio="15/7"
+/>
+
+To get a smooth result, I had to somehow generate only bits of chunks at a time, in the time between one frame and queuing the next. My solution solves this problem in the most direct way I can imagine.
+
+Instead of manually storing all current chunk generation data somewhere in memory, I made use of **generator functions** to keep most chunk generation logic and data within the scope of one function.
+
+<Figure
+  src="/projects/minier-minecraft/generator_func.png"
+  alt="Chunk generation between frames"
+  aspectRatio="10/7"
+/>
+
+Each frame, we give the top chunk in our queue a maximum amount of time (usually hovers around 5ms) to perform some generation. It calls a generator function, which loops through operations needed to either build its terrain or mesh. Every loop, it checks to see if it's passed the time threshold - and if so, it will `yield`, waiting for the next frame to give it a new time limit.
+
+This is kept performant by tracking how much time we usually get between frames and adjusting our allotted time accordingly. This means that no matter what refresh rate it runs at, or how powerful a user's computer is, we'll always have stable execution time for generation logic between frames, and therefore mostly stable frametime.
+
+## Player physics
+
+<Figure
+  src="/projects/minier-minecraft/movement.gif"
+  alt="Movement"
+  float="right"
+  aspectRatio="4/3"
+/>
+
+For player physics, I implemented a version of the classic **collide and slide**
+algorithm, limited to 3 collisions, as there are only 3 different axis-aligned block
+normals any movement vector could align with.
+
+The player is made up of a 2x2x3 grid of collision points, spanning from the tip of their head to the bottom of their feet. Every time the player needs to move some distance based on their current velocity, we run the following algorithm:
+
+1. We raycast from each collision vertex, using the movement vector.
+2. If anything is hit, we take the shortest distance found and move the player by that amount. We also remove all distance aligned with the collision plane's normal from the movement vector and player velocity.
+3. Repeat steps 1 and 2 until our movement vector is exhausted, or we hit a 3rd wall.
+
+This allows us to add the force of gravity every frame, along with various movement and damping forces based on the player's input, without worrying about getting stuck on any block - even if most of our velocity is towards the ground, we will still slide some amount along it.
+
+## Final product
+
+<Figure src="/projects/minier-minecraft/minecraft_01.png" />
+
+After adding some nice effects with THREE.js (environment map influencing block shading), along with block placing and breaking, we get a performant, portable replication of Minecraft's infinite terrain generation, and a physically accurate method of moving around inside it.
+
+[**Try it out!**](https://minecraft.tlshaw.me/)
