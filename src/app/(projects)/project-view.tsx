@@ -73,16 +73,13 @@ export default function ProjectView({
         }`}
       >
         <div className="absolute inset-0">
-          <Image
-            fill
-            className="object-cover"
-            src="https://placekitten.com/1020/120"
-            alt={name}
-          />
+          <Image fill className="object-cover" src={previewImage} alt={name} />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--project-color)] to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100" />
-        <div className="relative ml-8 transition-transform duration-300 group-hover:translate-x-2">
-          <h2 className="font-semibold tracking-[-.015em] text-white">
+        {/* gradient div */}
+        <div className="absolute inset-0 from-[var(--project-color)] to-transparent opacity-70 duration-500 max-md:bg-[var(--project-color)] md:bg-gradient-to-r md:opacity-90 md:transition-opacity md:group-hover:opacity-100" />
+        {/* text + logo content */}
+        <div className="relative ml-8 drop-shadow-md transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-105">
+          <h2 className="text-3xl font-semibold tracking-tight text-white">
             {name}
           </h2>
           {techStack && (

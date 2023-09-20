@@ -6,7 +6,7 @@ const projects: Omit<ProjectViewProps, 'appearDelay'>[] = [
     projectSlug: 'sdf-playground',
     techStack: ['typescript', 'webgl'],
     color: 'rgb(140, 46, 123)',
-    previewImage: 'troll',
+    previewImage: '/projects/sdf-playground/splash.png',
     underConstruction: true,
   },
   {
@@ -14,29 +14,30 @@ const projects: Omit<ProjectViewProps, 'appearDelay'>[] = [
     projectSlug: 'minier-minecraft',
     techStack: ['typescript', 'three'],
     color: 'rgb(23, 155, 152)',
-    previewImage: 'troll',
-  },
-  {
-    name: 'Mini Minecraft',
-    projectSlug: 'mini-minecraft',
-    techStack: ['cplusplus', 'opengl'],
-    color: 'rgb(65, 131, 75)',
-    previewImage: 'troll',
+    previewImage: '/projects/minier-minecraft/minecraft_02.png',
   },
   {
     name: 'Government Cheese',
     projectSlug: 'govcheese',
     techStack: ['nextjs', 'react', 'mongo'],
     color: 'rgb(179, 109, 71)',
-    previewImage: 'troll',
+    previewImage: '/projects/govcheese/splash.png',
   },
-  {
-    name: 'AntsWorld',
-    projectSlug: 'antsworld',
-    techStack: ['react', 'vite', 'socketio'],
-    color: 'rgb(80, 80, 80)',
-    previewImage: 'troll',
-  },
+  // TODO: more projects
+  // {
+  //   name: 'Mini Minecraft',
+  //   projectSlug: 'mini-minecraft',
+  //   techStack: ['cplusplus', 'opengl'],
+  //   color: 'rgb(65, 131, 75)',
+  //   previewImage: 'https://placekitten.com/1280/960',
+  // },
+  // {
+  //   name: 'AntsWorld',
+  //   projectSlug: 'antsworld',
+  //   techStack: ['react', 'vite', 'socketio'],
+  //   color: 'rgb(80, 80, 80)',
+  //   previewImage: 'https://placekitten.com/1280/960',
+  // },
 ];
 
 export default function ProjectsPage() {
