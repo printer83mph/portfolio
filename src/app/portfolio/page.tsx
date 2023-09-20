@@ -63,7 +63,7 @@ export default function PortfolioPage() {
       <Link
         href="https://artstation.com/printer83mph/"
         target="_blank"
-        className="flex aspect-square h-full w-full items-center justify-center gap-3 rounded-xl bg-neutral-800 hover:text-white sm:text-neutral-400"
+        className="flex aspect-square h-full w-full items-center justify-center gap-3 rounded-xl bg-neutral-800 [animation:appear_.4s_ease-out_.85s_1_normal_backwards] hover:text-white sm:text-neutral-400"
       >
         See more on ArtStation <HiArrowRight />
       </Link>
