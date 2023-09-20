@@ -1,28 +1,39 @@
-import ProjectView from './project-view';
+import ProjectView, { ProjectViewProps } from './project-view';
 
-const projects = [
+const projects: Omit<ProjectViewProps, 'appearDelay'>[] = [
   {
     name: 'SDF Playground',
     projectSlug: 'sdf-playground',
-    color: 'rgb(255, 0, 0)',
+    techStack: ['typescript', 'webgl'],
+    color: 'rgb(140, 46, 123)',
     previewImage: 'troll',
     underConstruction: true,
   },
   {
     name: 'Minier Minecraft',
     projectSlug: 'minier-minecraft',
-    color: 'rgb(0, 150, 150)',
+    techStack: ['typescript', 'three'],
+    color: 'rgb(23, 155, 152)',
+    previewImage: 'troll',
+  },
+  {
+    name: 'Mini Minecraft',
+    projectSlug: 'mini-minecraft',
+    techStack: ['cplusplus', 'opengl'],
+    color: 'rgb(65, 131, 75)',
     previewImage: 'troll',
   },
   {
     name: 'Government Cheese',
     projectSlug: 'govcheese',
-    color: 'rgb(170, 170, 0)',
+    techStack: ['nextjs', 'react', 'mongo'],
+    color: 'rgb(179, 109, 71)',
     previewImage: 'troll',
   },
   {
     name: 'AntsWorld',
     projectSlug: 'antsworld',
+    techStack: ['react', 'vite', 'socketio'],
     color: 'rgb(80, 80, 80)',
     previewImage: 'troll',
   },
