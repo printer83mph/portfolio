@@ -3,14 +3,6 @@ import { TbCrane } from 'react-icons/tb';
 
 const projects: Omit<ProjectViewProps, 'appearDelay'>[] = [
   {
-    name: 'SDF Playground',
-    projectSlug: 'sdf-playground',
-    techStack: ['typescript', 'webgl'],
-    color: 'rgb(140, 46, 123)',
-    previewImage: '/projects/sdf-playground/splash.png',
-    underConstruction: true,
-  },
-  {
     name: 'Minier Minecraft',
     projectSlug: 'minier-minecraft',
     techStack: ['typescript', 'three'],
@@ -23,6 +15,14 @@ const projects: Omit<ProjectViewProps, 'appearDelay'>[] = [
     techStack: ['nextjs', 'react', 'mongo'],
     color: 'rgb(179, 109, 71)',
     previewImage: '/projects/govcheese/splash.png',
+  },
+  {
+    name: 'SDF Playground',
+    projectSlug: 'sdf-playground',
+    techStack: ['typescript', 'webgl'],
+    color: 'rgb(140, 46, 123)',
+    previewImage: '/projects/sdf-playground/splash.png',
+    underConstruction: true,
   },
 ];
 

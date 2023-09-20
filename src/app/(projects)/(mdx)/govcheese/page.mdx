@@ -1,3 +1,72 @@
+import Link from 'next/link';
+import { HiArrowRight } from 'react-icons/hi2';
+import Figure from '@/components/figure';
+
 # Government Cheese
 
-{/* TODO */}
+<Figure
+  src="/projects/govcheese/home_preview.png"
+  alt="Government Cheese homepage"
+/>
+
+The official Government Cheese website is built using **TypeScript**, **React**, **Next.js**, **Prisma**, and **MongoDB**. It integrates with a third-party payment system, and uses SendGrid to automate sending receipts and magic links.
+
+<Link
+  href="https://govcheesedre.com/"
+  target="_blank"
+  className="mr-auto flex w-max items-center gap-3 rounded-lg bg-orange-500 px-10 py-2 font-semibold !no-underline transition-colors hover:bg-orange-600"
+  children={['Live Site', <HiArrowRight />]}
+/>
+
+## Hybrid user-admin design
+
+<Figure
+  src="/projects/govcheese/new_item_button.png"
+  float="right"
+  caption="Admin button hidden for normal users"
+  aspectRatio="1/1"
+/>
+
+Although users will never know, the site actually contains many conditionally rendered buttons and forms for creating and editing site content. The forms themselves (because they are rather complex) are **lazy-loaded** components, and so clients will never have to download the corresponding script, decreasing initial bundle size and increasing responsiveness.
+
+In the product creation/editing form, administrators are able to adjust many parameters. For example, adjusting thumbnail size will change how the panel appears on the "browse" section, and adding tags allows users to sort by specific types of items or colors.
+
+<Figure
+  src="/projects/govcheese/new_item_form.png"
+  caption="Interface for creating a new item"
+  aspectRatio="16/13"
+/>
+
+This interface can be accessed from the "browse" page to create a new item, or from any item's respective page to edit existing data.
+
+<Figure
+  src="/projects/govcheese/stock_management.png"
+  aspectRatio="9/10"
+  float="left"
+/>
+
+Admins are also able to manage multiple stock listings for items, in the case of different sizes or styles. If items have more than one stock, they are required to identify each with a name. Different stocks can specify overrides on the base price, along with sale price overrides.
+
+A listing being "out of stock" will prevent users from placing orders with said item. Admins are able to add as many stocks as needed.
+
+## Admin Dashboard
+
+<Figure
+  src="/projects/govcheese/admin_dashboard.png"
+  alt="Admin dashboard"
+  aspectRatio="16/8.5"
+/>
+
+If you're logged in as an admin, you can access a Dashboard, giving you access to stats, a to-do list, and even quick tips for managing the site.
+
+In the Orders tab, customer orders are tracked and can be marked as "shipped" and finally "delivered". The Preferences tab allows admins to enable or disable email notifications for orders, invite others, or delete their account if they really want to.
+
+## Grid layout
+
+The "browse" section of the site is arranged in a grid using `grid-auto-flow: dense`, with all product "panels" using `grid-row: span`. This automatically arranges panels of varying aspect ratios together into a cohesive display of images.
+
+<Figure
+  src="/projects/govcheese/products_grid.png"
+  alt="Browse cheese grid"
+  aspectRatio="4/3"
+/>
