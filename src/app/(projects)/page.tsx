@@ -1,5 +1,6 @@
-import ProjectView, { ProjectViewProps } from './project-view';
 import { TbCrane } from 'react-icons/tb';
+
+import ProjectView, { ProjectViewProps } from './project-view';
 
 export const metadata = {
   title: 'Projects | Thomas Shaw',

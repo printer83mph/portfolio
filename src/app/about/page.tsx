@@ -1,6 +1,8 @@
-import ThomasImage from '@/resources/thomas.png';
 import Image from 'next/image';
+
 import Socials from '../socials';
+
+import ThomasImage from '@/resources/thomas.png';
 
 export const metadata = {
   title: 'About | Thomas Shaw',

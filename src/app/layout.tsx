@@ -2,6 +2,7 @@ import './globals.css';
 
 import type { Metadata } from 'next';
 import { Schibsted_Grotesk } from 'next/font/google';
+
 import Nav from './nav';
 
 const fontSans = Schibsted_Grotesk({

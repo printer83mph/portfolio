@@ -1,10 +1,10 @@
 'use client';
 
-import { HiDocumentText, HiEnvelope, HiPhone } from 'react-icons/hi2';
-import { FaLinkedin, FaGithub, FaArtstation } from 'react-icons/fa6';
-import { IconType } from 'react-icons';
 import Link from 'next/link';
 import { ReactNode } from 'react';
+import { IconType } from 'react-icons';
+import { FaArtstation, FaGithub, FaLinkedin } from 'react-icons/fa6';
+import { HiDocumentText, HiEnvelope } from 'react-icons/hi2';
 
 const className = 'group flex flex-row items-center gap-4 pl-1';
 function Social({
