@@ -14,29 +14,20 @@ function Social({
 }: {
   icon: IconType;
   children: ReactNode;
-  href?: string;
+  href: string;
 }) {
-  const contents = (
-    <>
-      <Icon className="text-neutral-500 group-hover:text-white" />
-      <span
-        className={`text-neutral-400 group-hover:text-white ${
-          href ? 'group-hover:underline' : ''
-        }`}
-      >
-        {children}
-      </span>
-    </>
-  );
   return (
     <li key={href}>
-      {href ? (
-        <Link href={href} className={className} target="_blank">
-          {contents}
-        </Link>
-      ) : (
-        <div className={`${className} select-text`}>{contents}</div>
-      )}
+      <Link href={href} className={className} target="_blank">
+        <Icon className="text-neutral-500 group-hover:text-white" />
+        <span
+          className={`text-neutral-400 group-hover:text-white ${
+            href ? 'group-hover:underline' : ''
+          }`}
+        >
+          {children}
+        </span>
+      </Link>
     </li>
   );
 }
@@ -52,9 +43,6 @@ export default function Socials() {
       </Social>
       <Social icon={HiEnvelope} href="mailto:thomas@tlshaw.me">
         thomas@tlshaw.me
-      </Social>
-      <Social icon={HiPhone}>
-        <span className="tabular-nums">+1 (484) 535-1382</span>
       </Social>
       <div className="h-1.5" />
       <Social
