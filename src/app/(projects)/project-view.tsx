@@ -6,13 +6,17 @@ import { CSSProperties, useRef } from 'react';
 import { IconType } from 'react-icons';
 import { BiLogoTypescript } from 'react-icons/bi';
 import {
+  SiBlender,
   SiCplusplus,
+  SiHoudini,
   SiMongodb,
   SiNextdotjs,
   SiOpengl,
+  SiPython,
   SiReact,
   SiSocketdotio,
   SiThreedotjs,
+  SiUnrealengine,
   SiVite,
   SiWebgl,
 } from 'react-icons/si';
@@ -29,19 +33,24 @@ const techIcons = {
   opengl: SiOpengl,
   webgl: SiWebgl,
   socketio: SiSocketdotio,
+  unreal: SiUnrealengine,
+  houdini: SiHoudini,
+  python: SiPython,
+  blender: SiBlender,
 };
 
 export type Tech = keyof typeof techIcons;
 
 export type ProjectViewProps = {
   name: string;
-  projectSlug: string;
   techStack?: Tech[];
   color: string;
   previewImage: string;
   appearDelay: string;
-  underConstruction?: boolean;
-};
+} & (
+  | { underConstruction: true; projectSlug?: undefined }
+  | { underConstruction?: false; projectSlug: string }
+);
 
 export default function ProjectView({
   name,
@@ -66,7 +75,7 @@ export default function ProjectView({
       style={{ '--appear-delay': appearDelay } as CSSProperties}
     >
       <Link
-        href={`/${projectSlug}`}
+        href={underConstruction ? '/under-construction' : `/${projectSlug}`}
         style={{ '--project-color': color } as CSSProperties}
         className={`group relative flex h-72 flex-row items-center justify-start overflow-hidden rounded-xl max-sm:transition-[height] max-sm:duration-500 ${
           inMiddle ? 'max-sm:h-80' : 'max-sm:h-72'

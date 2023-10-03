@@ -23,8 +23,56 @@ const projects: Omit<ProjectViewProps, 'appearDelay'>[] = [
   },
   {
     name: 'SDF Playground',
-    projectSlug: 'sdf-playground',
     techStack: ['typescript', 'webgl'],
+    color: 'rgb(140, 46, 123)',
+    previewImage: '/projects/sdf-playground/splash.webp',
+    underConstruction: true,
+  },
+  {
+    name: 'Mini Minecraft',
+    techStack: ['cplusplus', 'opengl'],
+    color: 'rgb(140, 46, 123)',
+    previewImage: '/projects/sdf-playground/splash.webp',
+    underConstruction: true,
+  },
+  {
+    name: 'AntsWorld',
+    techStack: ['typescript', 'react'],
+    color: 'rgb(140, 46, 123)',
+    previewImage: '/projects/sdf-playground/splash.webp',
+    underConstruction: true,
+  },
+  {
+    name: 'SDF Ray Marching Engine',
+    techStack: ['cplusplus', 'opengl'],
+    color: 'rgb(140, 46, 123)',
+    previewImage: '/projects/sdf-playground/splash.webp',
+    underConstruction: true,
+  },
+  {
+    name: 'Procedural City',
+    techStack: ['houdini', 'python', 'blender', 'unreal'],
+    color: 'rgb(140, 46, 123)',
+    previewImage: '/projects/sdf-playground/splash.webp',
+    underConstruction: true,
+  },
+  {
+    name: 'Real-Time PBR Renderer',
+    techStack: ['cplusplus', 'opengl'],
+    color: 'rgb(140, 46, 123)',
+    previewImage: '/projects/sdf-playground/splash.webp',
+    underConstruction: true,
+  },
+  {
+    name: 'Monte Carlo Path Tracer',
+    techStack: ['cplusplus', 'opengl'],
+    color: 'rgb(140, 46, 123)',
+    previewImage: '/projects/sdf-playground/splash.webp',
+    underConstruction: true,
+  },
+  {
+    name: 'Mini Maya',
+    techStack: ['cplusplus', 'opengl'],
     color: 'rgb(140, 46, 123)',
     previewImage: '/projects/sdf-playground/splash.webp',
     underConstruction: true,
@@ -37,7 +85,7 @@ export default function ProjectsPage() {
       {projects.map((props, index) => (
         <ProjectView
           key={props.projectSlug}
-          {...props}
+          {...(props as ProjectViewProps)}
           appearDelay={`${index * 150}ms`}
         />
       ))}
