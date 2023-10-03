@@ -1,5 +1,3 @@
-import { TbCrane } from 'react-icons/tb';
-
 import ProjectView, { ProjectViewProps } from './project-view';
 
 export const metadata = {
@@ -50,6 +48,7 @@ const projects: Omit<ProjectViewProps, 'appearDelay'>[] = [
     techStack: ['houdini', 'python', 'blender', 'unreal'],
     previewImage: '/projects/under-construction/procedural-city.png',
     underConstruction: true,
+    link: 'https://youtu.be/1XRC1sz3-N8',
   },
   {
     name: 'Real-Time PBR Renderer',
