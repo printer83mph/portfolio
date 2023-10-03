@@ -11,70 +11,62 @@ const projects: Omit<ProjectViewProps, 'appearDelay'>[] = [
     name: 'Minier Minecraft',
     projectSlug: 'minier-minecraft',
     techStack: ['typescript', 'three'],
-    color: 'rgb(23, 155, 152)',
     previewImage: '/projects/minier-minecraft/minecraft_02.webp',
   },
   {
     name: 'Government Cheese',
     projectSlug: 'govcheese',
     techStack: ['nextjs', 'react', 'mongo'],
-    color: 'rgb(179, 109, 71)',
     previewImage: '/projects/govcheese/splash.webp',
   },
   {
     name: 'SDF Playground',
     techStack: ['typescript', 'webgl'],
-    color: 'rgb(140, 46, 123)',
-    previewImage: '/projects/sdf-playground/splash.webp',
+    previewImage: '/projects/under-construction/sdf-playground.webp',
     underConstruction: true,
+    link: 'https://github.com/printer83mph/sdf-playground',
   },
   {
     name: 'Mini Minecraft',
     techStack: ['cplusplus', 'opengl'],
-    color: 'rgb(140, 46, 123)',
-    previewImage: '/projects/sdf-playground/splash.webp',
+    previewImage: '/projects/under-construction/mini-minecraft.png',
     underConstruction: true,
   },
   {
     name: 'AntsWorld',
     techStack: ['typescript', 'react'],
-    color: 'rgb(140, 46, 123)',
-    previewImage: '/projects/sdf-playground/splash.webp',
+    previewImage: '/projects/under-construction/antsworld.png',
     underConstruction: true,
+    link: 'https://github.com/printer83mph/ants-world',
   },
   {
     name: 'SDF Ray Marching Engine',
     techStack: ['cplusplus', 'opengl'],
-    color: 'rgb(140, 46, 123)',
-    previewImage: '/projects/sdf-playground/splash.webp',
+    previewImage: '/projects/under-construction/sdf-kirby.png',
     underConstruction: true,
   },
   {
     name: 'Procedural City',
     techStack: ['houdini', 'python', 'blender', 'unreal'],
-    color: 'rgb(140, 46, 123)',
-    previewImage: '/projects/sdf-playground/splash.webp',
+    previewImage: '/projects/under-construction/procedural-city.png',
     underConstruction: true,
   },
   {
     name: 'Real-Time PBR Renderer',
     techStack: ['cplusplus', 'opengl'],
-    color: 'rgb(140, 46, 123)',
-    previewImage: '/projects/sdf-playground/splash.webp',
+    previewImage: '/projects/under-construction/pbr-sphere.png',
     underConstruction: true,
   },
   {
     name: 'Monte Carlo Path Tracer',
     techStack: ['cplusplus', 'opengl'],
-    color: 'rgb(140, 46, 123)',
-    previewImage: '/projects/sdf-playground/splash.webp',
+    previewImage: '/projects/under-construction/pathtracer.png',
     underConstruction: true,
   },
   {
     name: 'Mini Maya',
     techStack: ['cplusplus', 'opengl'],
-    color: 'rgb(140, 46, 123)',
-    previewImage: '/projects/sdf-playground/splash.webp',
+    previewImage: '/projects/under-construction/mini-maya.png',
     underConstruction: true,
   },
 ];
@@ -89,10 +81,7 @@ export default function ProjectsPage() {
           appearDelay={`${index * 150}ms`}
         />
       ))}
-      <div className="mt-12 flex items-center gap-4">
-        <TbCrane className="text-2xl" /> More project pages - new and old - are
-        under construction!
-      </div>
+      <div className="h-[10vh] max-h-[200px]" />
     </main>
   );
 }
