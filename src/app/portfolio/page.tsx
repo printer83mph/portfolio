@@ -1,37 +1,60 @@
 import Link from 'next/link';
 import { HiArrowRight } from 'react-icons/hi2';
 
-import { PortfolioImage } from './portfolio-image';
+import PortfolioPiece, { PortfolioPieceInfo } from './portfolio-image';
 
 export const metadata = {
   title: 'Portfolio | Thomas Shaw',
 };
 
-const portfolioImages: PortfolioImage[] = [
+const portfolioImages: PortfolioPieceInfo[] = [
   {
-    name: 'Mixer',
-    path: 'mixer_square.png',
-    size: 'sq-big',
-  },
-  {
-    name: 'Chair',
-    path: 'chair.jpeg',
-    size: 'tall',
-  },
-  {
-    name: 'A Cappella Fest Logo',
-    path: 'a_cappella.jpeg',
+    name: 'Sculpt - Morgan Yu',
     size: 'sq-small',
+    type: 'image',
+    path: 'm_yu_01.webp',
   },
   {
-    name: 'Tennis Balls',
-    path: 'tennis_balls.jpeg',
-    size: 'wide',
+    name: 'Modeling, Shading, Animation - Leekman',
+    size: 'sq-big',
+    type: 'video',
+    url: 'https://youtu.be/Azxawmvyhqs',
   },
   {
-    name: "World's Best Meeting Room",
-    path: 'meeting_room.jpeg',
+    name: 'Grungy Basement Background',
+    size: 'sq-small',
+    type: 'image',
+    path: 'beast_background_01.webp',
+  },
+  {
+    name: 'Modeling/Shading - Mixer',
+    size: 'sq-big',
+    type: 'image',
+    path: 'mixer_square.webp',
+  },
+  {
+    name: 'Modeling/Shading - Office Chair',
+    size: 'tall',
+    type: 'image',
+    path: 'chair.webp',
+  },
+  {
+    name: 'Modeling/Shading - A Cappella Fest Logo',
+    size: 'sq-small',
+    type: 'image',
+    path: 'a_cappella.webp',
+  },
+  {
+    name: 'Procedural Modeling, Shading - Tennis Balls',
     size: 'wide',
+    type: 'image',
+    path: 'tennis_balls.webp',
+  },
+  {
+    name: "Environment Art - World's Best Meeting Room",
+    size: 'wide',
+    type: 'image',
+    path: 'meeting_room.webp',
   },
 ];
 
@@ -39,7 +62,7 @@ export default function PortfolioPage() {
   return (
     <main className="grid grid-flow-row-dense grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
       {portfolioImages.map((img, index) => (
-        <PortfolioImage key={img.path} {...img} index={index} />
+        <PortfolioPiece key={img.name} {...img} index={index} />
       ))}
       <Link
         href="https://artstation.com/printer83mph/"

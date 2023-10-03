@@ -43,11 +43,10 @@ const techIcons = {
 
 export type Tech = keyof typeof techIcons;
 
-export type ProjectViewProps = {
+export type ProjectViewInfo = {
   name: string;
   techStack?: Tech[];
   previewImage: string;
-  appearDelay: string;
 } & (
   | { underConstruction: true; projectSlug?: undefined; link?: string }
   | { underConstruction?: false; projectSlug: string; link?: undefined }
@@ -61,7 +60,7 @@ export default function ProjectView({
   appearDelay,
   underConstruction,
   link,
-}: ProjectViewProps) {
+}: ProjectViewInfo & { appearDelay: string }) {
   const viewRef = useRef<HTMLDivElement>(undefined!);
   const entry = useIntersectionObserver(viewRef, {
     rootMargin: '-50% 0px -50% 0px',

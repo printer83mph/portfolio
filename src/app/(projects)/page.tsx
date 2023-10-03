@@ -1,10 +1,10 @@
-import ProjectView, { ProjectViewProps } from './project-view';
+import ProjectView, { ProjectViewInfo } from './project-view';
 
 export const metadata = {
   title: 'Projects | Thomas Shaw',
 };
 
-const projects: Omit<ProjectViewProps, 'appearDelay'>[] = [
+const projects: ProjectViewInfo[] = [
   {
     name: 'Minier Minecraft',
     projectSlug: 'minier-minecraft',
@@ -76,7 +76,7 @@ export default function ProjectsPage() {
       {projects.map((props, index) => (
         <ProjectView
           key={props.name}
-          {...(props as ProjectViewProps)}
+          {...props}
           appearDelay={`${index * 150}ms`}
         />
       ))}
