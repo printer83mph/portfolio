@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { CSSProperties, useRef } from 'react';
 import { IconType } from 'react-icons';
 import { BiLogoTypescript } from 'react-icons/bi';
+import { HiArrowTopRightOnSquare } from 'react-icons/hi2';
 import {
   SiBlender,
   SiCplusplus,
@@ -20,6 +21,7 @@ import {
   SiVite,
   SiWebgl,
 } from 'react-icons/si';
+import { TbCrane } from 'react-icons/tb';
 import { useIntersectionObserver } from 'usehooks-ts';
 
 const techIcons = {
@@ -67,6 +69,8 @@ export default function ProjectView({
   });
   const inMiddle = !!entry?.isIntersecting;
 
+  const LinkIcon = link ? HiArrowTopRightOnSquare : TbCrane;
+
   return (
     <div
       ref={viewRef}
@@ -98,7 +102,11 @@ export default function ProjectView({
           }`}
         />
         {/* text + logo content */}
-        <div className="relative ml-8 drop-shadow-xl transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-105">
+        <div
+          className={`relative ml-8 drop-shadow-xl transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-105 ${
+            inMiddle ? 'max-xl:translate-x-2 max-xl:scale-105' : ''
+          }`}
+        >
           <h2 className="text-3xl font-semibold tracking-tight text-white">
             {name}
           </h2>
@@ -111,6 +119,16 @@ export default function ProjectView({
             </div>
           )}
         </div>
+        {underConstruction && (
+          <div
+            className={`transition-500 absolute bottom-5 left-8 z-10 flex items-center gap-3 text-lg tracking-wide opacity-30 drop-shadow transition-all group-hover:opacity-100 ${
+              inMiddle ? 'max-xl:opacity-100' : ''
+            }`}
+          >
+            Page Under Construction
+            <LinkIcon />
+          </div>
+        )}
       </Link>
     </div>
   );
