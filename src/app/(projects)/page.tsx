@@ -75,7 +75,7 @@ export default function ProjectsPage() {
     <main>
       {projects.map((props, index) => (
         <ProjectView
-          key={props.projectSlug}
+          key={props.name}
           {...(props as ProjectViewProps)}
           appearDelay={`${index * 150}ms`}
         />
