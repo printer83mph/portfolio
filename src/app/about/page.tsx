@@ -46,8 +46,8 @@ export default function AboutPage() {
           </p>
           <iframe
             className="mt-20 aspect-square w-full select-none md:aspect-video"
-            src="https://www.youtube.com/embed/7_Y5wbHbbL8"
-            title="Thomas Shaw - Technical Artist Demo Reel - Fall 2023"
+            src="https://www.youtube.com/embed/3RroXwmEc4o"
+            title="Thomas Shaw: Technical Artist - Demo Reel"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
