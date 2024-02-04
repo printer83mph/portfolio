@@ -12,6 +12,13 @@ const projects: ProjectViewInfo[] = [
     previewImage: '/projects/minier-minecraft/minecraft_02.webp',
   },
   {
+    name: 'Procedural City',
+    techStack: ['houdini', 'python', 'blender', 'unreal'],
+    previewImage: '/projects/under-construction/procedural-city.png',
+    underConstruction: true,
+    link: 'https://youtu.be/1XRC1sz3-N8',
+  },
+  {
     name: 'Government Cheese',
     projectSlug: 'govcheese',
     techStack: ['nextjs', 'react', 'mongo'],
@@ -42,13 +49,6 @@ const projects: ProjectViewInfo[] = [
     techStack: ['cplusplus', 'opengl'],
     previewImage: '/projects/under-construction/sdf-kirby.png',
     underConstruction: true,
-  },
-  {
-    name: 'Procedural City',
-    techStack: ['houdini', 'python', 'blender', 'unreal'],
-    previewImage: '/projects/under-construction/procedural-city.png',
-    underConstruction: true,
-    link: 'https://youtu.be/1XRC1sz3-N8',
   },
   {
     name: 'Real-Time PBR Renderer',

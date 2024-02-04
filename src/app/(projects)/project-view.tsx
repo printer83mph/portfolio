@@ -87,8 +87,8 @@ export default function ProjectView({
         <div className="absolute inset-0">
           <Image
             fill
-            className={`scale-105 object-cover blur-sm transition-all duration-500 xl:group-hover:scale-100 xl:group-hover:blur-0 ${
-              inMiddle ? 'max-xl:scale-100 max-xl:blur-0' : ''
+            className={`scale-105 object-cover transition-all duration-500 xl:group-hover:scale-100 ${
+              inMiddle ? 'max-xl:scale-100' : ''
             }`}
             src={previewImage}
             alt={name}
@@ -124,7 +124,7 @@ export default function ProjectView({
               inMiddle ? 'max-xl:opacity-100' : ''
             }`}
           >
-            Page Under Construction
+            {underConstruction && (link ? 'Link' : 'Page Under Construction')}
             <LinkIcon />
           </div>
         )}
