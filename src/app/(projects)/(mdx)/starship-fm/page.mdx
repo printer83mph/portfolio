@@ -34,10 +34,97 @@ This design was created as part of the DSGN 2570 (UI/UX Design) course at UPenn.
 
 Originally, the goals for this project were much looser. I wanted to incorporate the idea of a visually mapped out web of musical genres and artists, as well as allow users to dynamically explore said map. Along with this, I wanted to allow users to leave "notes" or something similar behind for each other, creating unique moments of realization that a friend is a fan of some music without recommendations being made back and forth.
 
-However, through user research and testing, the scope was narrowed to a single goal: an app allowing active music exploration.
+However, through user research and testing, the scope was narrowed to a single goal: an interface for active music exploration.
 
 ## Research methods
 
-###
+### Surveys
+
+<Figure
+  src="/projects/starship-fm/music_exploration_survey.webp"
+  alt="Music Exploration Survey"
+  aspectRatio="1.404/1"
+/>
+
+First, in order to gain a better idea of the problems people really have with "exploration" features in existing streaming services, I created a survey which explores various aspects of listening behavior.
+
+Through the survey's ~30 responses, I discovered a few interesting stances on existing streaming apps:
+
+<div>
+  <div className="md:grid grid-cols-2">
+    <div>
+    - <span className="text-3xl text-white">56%</span> of respondents liked that the “discover” feature was “close to my existing taste”
+    </div>
+    <div>
+    - <span className="text-3xl text-white">55%</span> of respondents liked that the “discover” feature had “good variety of music”
+    </div>
+  </div>
+  <div className="md:grid grid-cols-2">
+    <div>
+    - <span className="text-3xl text-white">16%</span> of respondents didn’t like that the “discover” feature had “not enough variety of music”
+    </div>
+    <div>
+    - <span className="text-3xl text-white">20%</span> of respondents didn’t like that the “discover” feature “doesn't update frequently enough”
+    </div>
+  </div>
+</div>
+
+Overall, it seemed like users enjoyed their streaming services' "explore" features, but there was a level of discontent surrounding the ability to customize its behavior.
+
+
+### Interviews
+
+I also performed a number of interviews with folks who reported themselves to be more interested in exploring new music.
+
+> Yeah, I use 'Discover Weekly' every now and then. I’ll put it on shuffle, wait until I get a really good song, then jump to the album it’s from.
+
+There seemed to be some recurring behavior patterns: users would start from some song they knew or a mix Spotify creates, and keep listening from "autoplay" until they either found a song they really liked, or skipped one they didn't. From there, they might jump to the corresponding artist or album, and continue listening from there.
+
+
+<Figure
+  src="/projects/starship-fm/sailing_wireframe.webp"
+  alt="Various song titles in series on a map"
+  aspectRatio="1/2.164"
+  float="right"
+  caption="An early wireframe, using an array of sailing imagery"
+/>
 
 ## Design language
+
+In order to represent the idea of "free exploration," my first thought was to use sailing imagery.
+
+However, after some design iterations, I found the language didn't read well unless it was pushed to a more extreme level, at which point it started to clutter the interface. Seeing as this app was supposed to provide users with a relaxing journey, I moved on to a different aesthetic.
+
+### Space aesthetics
+
+Although it's somewhat overdone in the app market, I felt that a space exploration theme might better resonate with the overall goals of this project.
+
+After some experimentation, I landed on a pleasant lavender-ish palette, with a saturated "theme" color set and a desaturated "neutral" color set.
+
+<Figure
+  src="/projects/starship-fm/hifi_palette.webp"
+  alt="The app's color palette"
+  aspectRatio="4.047/1"
+/>
+
+<Figure
+  src="/projects/starship-fm/hifi_typography.webp"
+  alt="Typographic styles for the project"
+  aspectRatio="1.1332/1"
+  float="left"
+/>
+
+A dark theme would make album art pop, and would be familiar for users of common streaming apps, so I opted to omit any "light mode" alternate designs. These colors are combined with very rounded corners for layout as well as slight shadowing to create a pleasant illusion of depth in a very geometric interface.
+
+<Figure
+  src="/projects/starship-fm/hifi_card_example.webp"
+  alt="An example of a card element"
+  aspectRatio="1.3604/1"
+/>
+
+These design choices combine to create a pleasant interface that is unique but also reminiscent of existing media streaming apps. In testing, users responded positively, and so the overall aesthetic remained for the rest of the project.
+
+
+## Iteration
+
+### User testing
