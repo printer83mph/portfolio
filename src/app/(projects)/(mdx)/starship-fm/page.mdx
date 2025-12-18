@@ -4,7 +4,6 @@ export const metadata = {
   title: 'Starship.fm | Thomas Shaw',
 };
 
-
 # Starship.fm
 
 UI/UX design case study in music exploration
@@ -15,13 +14,11 @@ UI/UX design case study in music exploration
   aspectRatio="1.384/1"
 />
 
-
 ## Overview
 
 Starship.fm is an active music exploration app, meant to live alongside existing streaming services. Its target audience is those who find Spotify or other services' "exploration" features to be lacking.
 
 This design was created as part of the DSGN 2570 (UI/UX Design) course at UPenn.
-
 
 <Figure
   src="/projects/starship-fm/early_wireframe.webp"
@@ -31,13 +28,11 @@ This design was created as part of the DSGN 2570 (UI/UX Design) course at UPenn.
   caption="An early wireframe, incorporating the 'music map' idea"
 />
 
-
 ## The goal
 
 Originally, the goals for this project were much looser. I wanted to incorporate the idea of a visually mapped out web of musical genres and artists, as well as allow users to dynamically explore said map. Along with this, I wanted to allow users to leave "notes" or something similar behind for each other, creating unique moments of realization that a friend is a fan of some music without recommendations being made back and forth.
 
 However, through user research and testing, the scope was narrowed to a single goal: an interface for active music exploration.
-
 
 ## Research methods
 
@@ -54,26 +49,29 @@ First, in order to gain a better idea of the problems people really have with "e
 Through the survey's ~30 responses, I discovered a few interesting stances on existing streaming apps:
 
 <div>
-  <div className="md:grid grid-cols-2">
+  <div className="grid-cols-2 md:grid">
     <div>
-    - <span className="text-3xl text-white">56%</span> of respondents liked that the “discover” feature was “close to my existing taste”
+      - <span className="text-3xl text-white">56%</span> of respondents liked
+      that the “discover” feature was “close to my existing taste”
     </div>
     <div>
-    - <span className="text-3xl text-white">55%</span> of respondents liked that the “discover” feature had “good variety of music”
+      - <span className="text-3xl text-white">55%</span> of respondents liked
+      that the “discover” feature had “good variety of music”
     </div>
   </div>
-  <div className="md:grid grid-cols-2">
+  <div className="grid-cols-2 md:grid">
     <div>
-    - <span className="text-3xl text-white">16%</span> of respondents didn’t like that the “discover” feature had “not enough variety of music”
+      - <span className="text-3xl text-white">16%</span> of respondents didn’t
+      like that the “discover” feature had “not enough variety of music”
     </div>
     <div>
-    - <span className="text-3xl text-white">20%</span> of respondents didn’t like that the “discover” feature “doesn't update frequently enough”
+      - <span className="text-3xl text-white">20%</span> of respondents didn’t
+      like that the “discover” feature “doesn't update frequently enough”
     </div>
   </div>
 </div>
 
 Overall, it seemed like users enjoyed their streaming services' "explore" features, but there was a level of discontent surrounding the ability to customize its behavior.
-
 
 ### Interviews
 
@@ -91,13 +89,11 @@ There seemed to be some recurring behavior patterns: users would start from some
   caption="An early wireframe, using an array of sailing imagery"
 />
 
-
 ## Design language
 
 In order to represent the idea of "free exploration," my first thought was to use sailing imagery.
 
 However, after some design iterations, I found the language didn't read well unless it was pushed to a more extreme level, at which point it started to clutter the interface. Seeing as this app was supposed to provide users with a relaxing journey, I moved on to a different aesthetic.
-
 
 ### Space aesthetics
 
@@ -120,7 +116,6 @@ After some experimentation, I landed on a pleasant lavender-ish palette, with a 
 
 A dark theme would make album art pop, and would be familiar for users of common streaming apps, so I opted to omit any "light mode" alternate designs. These colors are combined with very rounded corners for layout as well as slight shadowing to create a pleasant illusion of depth in a somewhat geometric interface that isn't too hard on the eyes.
 
-
 <Figure
   src="/projects/starship-fm/icons.webp"
   alt="Icon set"
@@ -138,7 +133,6 @@ I also opted to use MIT-licensed icons courtesy of Myrna UI. These were picked d
 />
 
 These design choices combine to create a pleasant interface that is unique but also reminiscent of existing media streaming apps. In testing, users responded positively, and so the overall aesthetic remained for the rest of the project.
-
 
 ## Iterations
 
@@ -170,7 +164,6 @@ These search methods can also be narrowed by dragging songs, artists, or genres 
 Once they have found an appropriate starting place, users will be prompted to start an "expedition." This is meant to replicate the UI/UX of navigation apps, in which multiple stops can be added to a journey.
 
 This well-known layout along with typical music "queue" behavior (such as swiping to remove an upcoming song) are combined to create a familiar-feeling interface.
-
 
 ### User testing
 
@@ -206,9 +199,10 @@ The final mobile prototype can be accessed [here](https://www.figma.com/proto/gk
 <div className="md:bg-neutral-900 md:px-4 md:py-1 md:rounded-xl">
   A huge thank you to everyone who filled out the survey!
 
-  *Handles optionally provided by respondents:*
+_Handles optionally provided by respondents:_
 
-  > Audrey Yang, Daniel Gerhardt, Johnny Jeong, Aris, Nico Kong, Icey4x, Kevin Wei, Jesse, Underline Slopper, Jacky Park, 'I've got a finger in every pie', MaceyM, and Kevin Ma
+> Audrey Yang, Daniel Gerhardt, Johnny Jeong, Aris, Nico Kong, Icey4x, Kevin Wei, Jesse, Underline Slopper, Jacky Park, 'I've got a finger in every pie', MaceyM, and Kevin Ma
 
-  Thank you to the interviewees and testers as well!! This project wouldn't be possible without you.
+Thank you to the interviewees and testers as well!! This project wouldn't be possible without you.
+
 </div>
