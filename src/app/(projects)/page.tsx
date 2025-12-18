@@ -12,6 +12,12 @@ const projects: ProjectViewInfo[] = [
     previewImage: '/projects/minier-minecraft/minecraft_02.webp',
   },
   {
+    name: 'Starship.FM',
+    projectSlug: 'starship-fm',
+    techStack: ['figma'],
+    previewImage: '/projects/starship-fm/ui_preview.webp',
+  },
+  {
     name: 'Procedural City',
     techStack: ['houdini', 'python', 'blender', 'unreal'],
     previewImage: '/projects/under-construction/procedural-city.png',
