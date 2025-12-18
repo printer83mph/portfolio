@@ -9,6 +9,7 @@ import { HiArrowTopRightOnSquare } from 'react-icons/hi2';
 import {
   SiBlender,
   SiCplusplus,
+  SiFigma,
   SiHoudini,
   SiMongodb,
   SiNextdotjs,
@@ -39,6 +40,7 @@ const techIcons = {
   houdini: SiHoudini,
   python: SiPython,
   blender: SiBlender,
+  figma: SiFigma,
 };
 
 export type Tech = keyof typeof techIcons;
@@ -78,7 +80,9 @@ export default function ProjectView({
     >
       <Link
         href={
-          underConstruction ? link ?? '/under-construction' : `/${projectSlug}`
+          underConstruction
+            ? (link ?? '/under-construction')
+            : `/${projectSlug}`
         }
         className={`group relative flex h-72 flex-row items-center justify-start overflow-hidden rounded-xl max-sm:transition-[height] max-sm:duration-500 ${
           inMiddle ? 'max-sm:h-80' : 'max-sm:h-72'
