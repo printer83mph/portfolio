@@ -1,4 +1,5 @@
 onlyBuiltDependencies:
+  - sharp
   - unrs-resolver
 
 overrides:
